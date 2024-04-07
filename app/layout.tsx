@@ -10,9 +10,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "ChonzaUI - React UI Library",
+  title: "Wing - React UI Library",
   description:
-    "ChonzaUI is a React UI Library built with TailwindCSS and Framer Motion.",
+    "Wing is a React UI Library built with TailwindCSS and Framer Motion.",
 };
 
 export default function RootLayout({
