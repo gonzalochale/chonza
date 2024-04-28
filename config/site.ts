@@ -18,23 +18,19 @@ export const siteConfig = {
           title: "Introduction",
           path: "/docs",
         },
-        {
-          title: "Installation",
-          path: "/docs/installation",
-        },
       ],
     },
     {
       title: "Components",
-      path: "/docs/components/radar",
+      path: "/components/radar",
       subpages: [
         {
           title: "Radar",
-          path: "/docs/components/radar",
+          path: "/components/radar",
         },
         {
           title: "Glitch",
-          path: "/docs/components/glitch",
+          path: "/components/glitch",
         },
       ],
     },
