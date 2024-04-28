@@ -9,6 +9,36 @@ export const siteConfig = {
     github: "https://github.com/gonzalochale",
     portfolio: "https://www.gonzalochale.dev",
   },
+  docs: [
+    {
+      title: "Getting Started",
+      path: "/docs",
+      subpages: [
+        {
+          title: "Introduction",
+          path: "/docs",
+        },
+        {
+          title: "Installation",
+          path: "/docs/installation",
+        },
+      ],
+    },
+    {
+      title: "Components",
+      path: "/docs/components/radar",
+      subpages: [
+        {
+          title: "Radar",
+          path: "/docs/components/radar",
+        },
+        {
+          title: "Glitch",
+          path: "/docs/components/glitch",
+        },
+      ],
+    },
+  ],
 };
 
 export type SiteConfig = typeof siteConfig;

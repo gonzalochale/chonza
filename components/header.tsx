@@ -11,9 +11,9 @@ import { MobileNav } from "./mobile-nav";
 export function Header() {
   const pathname = usePathname();
   return (
-    <header className="z-50 max-sm:px-4 sm:container py-4 sticky top-0 backdrop-blur-lg flex justify-center items-center">
+    <header className="z-50 max-md:px-4 md:container py-2 sticky top-0 backdrop-blur-lg flex justify-center items-center">
       <MobileNav />
-      <nav className="max-sm:hidden flex gap-10 w-full items-center">
+      <nav className="max-md:hidden flex gap-10 w-full items-center">
         <Link href="/">
           <h1 className="text-lg font-semibold tracking-tighter flex gap-1 items-center">
             {siteConfig.name}
@@ -23,6 +23,7 @@ export function Header() {
           <Link href="/docs">
             <Button
               variant="link"
+              size="sm"
               className={cn(
                 "hover:no-underline text-muted-foreground hover:text-foreground",
                 pathname === "/docs" && "text-foreground"
@@ -31,9 +32,10 @@ export function Header() {
               Docs
             </Button>
           </Link>
-          <Link href="/components">
+          <Link href="/components/radar">
             <Button
               variant="link"
+              size="sm"
               className={cn(
                 "hover:no-underline text-muted-foreground hover:text-foreground",
                 pathname === "/components" && "text-foreground"
@@ -51,7 +53,7 @@ export function Header() {
           rel="noreferrer noopener"
         >
           <Button
-            variant="default"
+            variant="outline"
             size="sm"
             className="flex gap-3 items-center"
           >

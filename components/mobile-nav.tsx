@@ -13,11 +13,14 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export function MobileNav() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   return (
-    <div className="sm:hidden flex gap-10 w-full items-center">
+    <div className="md:hidden flex gap-10 w-full items-center">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
           <Button size="icon" variant="outline">
@@ -34,25 +37,33 @@ export function MobileNav() {
                 {siteConfig.name}
               </Link>
             </SheetTitle>
-            <ScrollArea>
-              <nav className="flex flex-col gap-4 items-start w-full">
-                <Link href="/docs" onClick={() => setOpen(false)}>
-                  <Button
-                    variant="link"
-                    className="hover:no-underline text-muted-foreground hover:text-foreground"
-                  >
-                    Docs
-                  </Button>
-                </Link>
-                <Link href="/components" onClick={() => setOpen(false)}>
-                  <Button
-                    variant="link"
-                    className="hover:no-underline text-muted-foreground hover:text-foreground"
-                  >
-                    Components
-                  </Button>
-                </Link>
-              </nav>
+            <ScrollArea className="flex flex-col gap-3">
+              <div className="flex flex-col gap-5 items-start mt-5">
+                {siteConfig.docs.map((doc) => (
+                  <>
+                    <span className="scroll-m-20 text-base font-medium tracking-tight">
+                      {doc.title}
+                    </span>
+                    {doc.subpages.map((subpage) => (
+                      <Link
+                        key={subpage.path}
+                        href={subpage.path}
+                        onClick={() => setOpen(false)}
+                      >
+                        <Button
+                          variant="link"
+                          className={cn(
+                            "hover:no-underline text-muted-foreground hover:text-foreground px-0",
+                            pathname === `${subpage.path}` && "text-foreground"
+                          )}
+                        >
+                          {subpage.title}
+                        </Button>
+                      </Link>
+                    ))}
+                  </>
+                ))}
+              </div>
             </ScrollArea>
           </SheetHeader>
         </SheetContent>
