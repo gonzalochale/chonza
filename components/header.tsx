@@ -11,7 +11,7 @@ import { MobileNav } from "./mobile-nav";
 export function Header() {
   const pathname = usePathname();
   return (
-    <header className="z-50 max-md:px-4 md:container py-2 sticky top-0 backdrop-blur-lg flex justify-center items-center">
+    <header className="max-md:px-4 md:container py-2 backdrop-blur-lg flex justify-center items-center">
       <MobileNav />
       <nav className="max-md:hidden flex gap-10 w-full items-center">
         <Link href="/">
@@ -32,13 +32,13 @@ export function Header() {
               Docs
             </Button>
           </Link>
-          <Link href="/components/radar">
+          <Link href="/components/glitch">
             <Button
               variant="link"
               size="sm"
               className={cn(
                 "hover:no-underline text-muted-foreground hover:text-foreground",
-                pathname === "/components" && "text-foreground"
+                pathname.includes("components") && "text-foreground"
               )}
             >
               Components

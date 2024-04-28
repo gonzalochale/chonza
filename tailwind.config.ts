@@ -19,6 +19,10 @@ const config = {
       },
     },
     extend: {
+      backgroundImage: {
+        "radial-gradient":
+          "repeating-radial-gradient(circle at center center, #09090B 0%, #09090B 55px, transparent 58px);",
+      },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
