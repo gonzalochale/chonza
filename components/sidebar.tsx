@@ -9,9 +9,8 @@ import { Badge } from "./ui/badge";
 
 export const Sidebar = () => {
   const pathname = usePathname();
-
   return (
-    <aside className="sticky top-[49px] gap-10 py-10 z-50 h-[calc(100dvh-48px)] w-full border-r hidden md:block">
+    <aside className="sticky top-[49px] gap-10 py-10 z-50 h-[calc(100dvh-98px)] w-full hidden md:block">
       <ScrollArea className="flex flex-col gap-3">
         <div className="flex flex-col gap-5">
           {siteConfig.docs.map((doc) => (
