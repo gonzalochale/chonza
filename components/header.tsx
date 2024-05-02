@@ -56,9 +56,24 @@ export function Header() {
             <Button
               variant="outline"
               size="sm"
-              className="flex gap-3 items-center"
+              className="flex gap-3 items-center max-md:h-9 max-md:w-9 max-md:px-0"
             >
-              Follow on <Icons.twitter />
+              <span className="hidden md:block">Follow on</span>{" "}
+              <Icons.twitter />
+            </Button>
+          </Link>
+          <Link
+            href={siteConfig.links.github}
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <Button
+              variant="outline"
+              size="sm"
+              className="flex gap-3 items-center max-md:h-9 max-md:w-9 max-md:px-0"
+            >
+              <span className="hidden md:block">Give a star</span>{" "}
+              <Icons.github />
             </Button>
           </Link>
           <ThemeSwitcher />

@@ -6,7 +6,7 @@ export const siteConfig = {
   author: "Gonzalo Chalé",
   links: {
     twitter: "https://twitter.com/gonzalochale",
-    github: "https://github.com/gonzalochale",
+    github: "https://github.com/gonzalochale/chonza",
     portfolio: "https://www.gonzalochale.dev",
   },
   docs: [
