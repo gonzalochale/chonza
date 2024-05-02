@@ -67,7 +67,7 @@ export default function GlitchBanner() {
   return (
     <section className="w-full h-[400px] flex justify-center">
       <h1 className="flex flex-col justify-center w-full h-full text-black dark:text-white max-w-2xl max-lg:text-5xl text-7xl font-extrabold max-lg:text-center tracking-tighter">
-        <span>BUILDING</span>
+        BUILDING
         <span style={{ color: currentText.color }}>
           {currentText.text.split("").map((char, index) => (
             <span
@@ -92,7 +92,7 @@ export default function GlitchBanner() {
             </span>
           ))}
         </span>
-        <span>PRODUCTS</span>
+        PRODUCTS
       </h1>
     </section>
   );
