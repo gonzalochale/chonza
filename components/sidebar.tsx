@@ -10,7 +10,7 @@ export const Sidebar = () => {
   const pathname = usePathname();
 
   return (
-    <aside className="sticky top-10 gap-10 py-10 z-30 hidden h-full w-full shrink-0 md:sticky md:block">
+    <aside className="sticky top-[49px] gap-10 py-10 z-50 h-[calc(100dvh-48px)] w-full border-r hidden md:block">
       <ScrollArea className="flex flex-col gap-3">
         <div className="flex flex-col gap-5">
           {siteConfig.docs.map((doc) => (

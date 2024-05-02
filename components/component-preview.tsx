@@ -30,7 +30,7 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        "border rounded-[1rem] w-full min-h-[400px] flex justify-center items-center overflow-hidden"
+        "bg-card border rounded-[1rem] w-full min-h-[400px] flex justify-center items-center overflow-hidden"
       )}
       {...props}
     >
