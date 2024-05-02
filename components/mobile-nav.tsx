@@ -15,6 +15,7 @@ import { siteConfig } from "@/config/site";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { Badge } from "./ui/badge";
 
 export function MobileNav() {
   const pathname = usePathname();
@@ -52,6 +53,7 @@ export function MobileNav() {
                         key={subpage.path}
                         href={subpage.path}
                         onClick={() => setOpen(false)}
+                        className="flex items-center gap-3"
                       >
                         <Button
                           variant="link"
@@ -62,6 +64,7 @@ export function MobileNav() {
                         >
                           {subpage.title}
                         </Button>
+                        {subpage.new && <Badge variant="outline">New</Badge>}
                       </Link>
                     ))}
                   </div>

@@ -34,5 +34,5 @@
 }
 
 .subheading-anchor {
-  @apply no-underline hover:underline;
+  @apply no-underline;
 }

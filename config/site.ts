@@ -17,6 +17,7 @@ export const siteConfig = {
         {
           title: "Introduction",
           path: "/docs",
+          new: false,
         },
       ],
     },

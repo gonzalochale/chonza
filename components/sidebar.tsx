@@ -5,6 +5,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Badge } from "./ui/badge";
 
 export const Sidebar = () => {
   const pathname = usePathname();
@@ -19,7 +20,11 @@ export const Sidebar = () => {
                 {doc.title}
               </span>
               {doc.subpages.map((subpage) => (
-                <Link key={subpage.path} href={subpage.path}>
+                <Link
+                  key={subpage.path}
+                  href={subpage.path}
+                  className="flex items-center gap-3"
+                >
                   <Button
                     variant="link"
                     size="sm"
@@ -30,6 +35,7 @@ export const Sidebar = () => {
                   >
                     {subpage.title}
                   </Button>
+                  {subpage.new && <Badge variant="outline">New</Badge>}
                 </Link>
               ))}
             </>
