@@ -40,7 +40,10 @@ export function MobileNav() {
             <ScrollArea className="flex flex-col gap-3">
               <div className="flex flex-col gap-5 items-start mt-5">
                 {siteConfig.docs.map((doc) => (
-                  <>
+                  <div
+                    key={doc.title}
+                    className="flex flex-col gap-5 items-start"
+                  >
                     <span className="scroll-m-20 text-base font-medium tracking-tight">
                       {doc.title}
                     </span>
@@ -61,7 +64,7 @@ export function MobileNav() {
                         </Button>
                       </Link>
                     ))}
-                  </>
+                  </div>
                 ))}
               </div>
             </ScrollArea>
