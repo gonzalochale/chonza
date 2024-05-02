@@ -32,7 +32,7 @@ export default function CodeBlockWrapper({
         {children}
         <div
           className={cn(
-            "absolute inset-0 flex items-center justify-center bg-gradient-to-t from-card to-transparent z-0",
+            "absolute inset-0 flex items-center justify-center bg-gradient-to-t from-[#0D0D0C] to-transparent z-0",
             open ? "hidden" : "block"
           )}
         ></div>
