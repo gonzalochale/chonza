@@ -21,7 +21,7 @@
 }
 
 [data-rehype-pretty-code-figure] [data-highlighted-line] {
-  @apply border-l border-primary bg-accent;
+  @apply border-l border-primary bg-[#212121]
 }
 
 [data-rehype-pretty-code-figure] [data-highlighted-chars] {
