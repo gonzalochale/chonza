@@ -7,7 +7,7 @@ published: true
 
 # Radar
 
-Call to action radar component with a radial gradient background.
+The radar component is a great way to draw attention to a specific button on the page. It can be used to redirect users to a specific page.
 
 ## Preview
 
@@ -17,7 +17,7 @@ Call to action radar component with a radial gradient background.
 
 Set up the radial gradient background in the `tailwind.config.ts` file.
 
-```css {3-5} showLinesNumbers 
+```ts {6-9} 
 import type { Config } from "tailwindcss";
 
 const config = {
@@ -38,7 +38,7 @@ export default config;
 
 Copy the following code to your component file for example `radar.tsx`.
 
-```tsx showLineNumbers 
+```tsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -88,6 +88,6 @@ export default RadarComponent;
 import RadarComponent from "@/components/radar";
 ```
 
-```tsx showLineNumbers
+```tsx
 <RadarComponent href="https://twitter.com/gonzalochale">Click Me</RadarComponent>
 ```

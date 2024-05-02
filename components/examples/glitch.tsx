@@ -60,7 +60,7 @@ export default function GlitchBanner() {
           text: words[currentWordIndex].text,
           color: words[currentWordIndex].color,
         });
-      }, 400);
+      }, 300);
     }
   }, [currentText, glitchActive, words, currentWordIndex]);
 

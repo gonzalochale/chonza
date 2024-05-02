@@ -4,7 +4,6 @@ import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Analytics } from "@vercel/analytics/react";
-
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/header";
 

@@ -7,7 +7,7 @@ published: true
 
 # Glitch
 
-Glitch effect banner component.
+This component creates a glitch effect banner, crafted with React and Tailwind CSS. The banner displays a series of words with a glitch effect. The words are displayed in a loop, changing every 2 seconds.
 
 ## Preview
 
@@ -17,7 +17,7 @@ Glitch effect banner component.
 
 Copy the following code to your component file for example `radar.tsx`.
 
-```tsx showLineNumbers 
+```tsx
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
@@ -80,7 +80,7 @@ export default function GlitchBanner() {
           text: words[currentWordIndex].text,
           color: words[currentWordIndex].color,
         });
-      }, 400);
+      }, 300);
     }
   }, [currentText, glitchActive, words, currentWordIndex]);
 
@@ -125,6 +125,6 @@ export default function GlitchBanner() {
 import GlitchBanner from "@/components/glitch-banner";
 ```
 
-```tsx showLineNumbers
+```tsx
 <GlitchBanner />
 ```

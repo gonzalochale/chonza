@@ -1,79 +1,38 @@
-[data-theme="light"] {
-  display: block;
+[data-rehype-pretty-code-figure] pre {
+  @apply px-0 bg-[#0D0D0C] border;
 }
 
-[data-theme="dark"] {
-  display: none;
+[data-rehype-pretty-code-figure] code {
+  @apply text-sm !leading-loose md:text-base border-0 p-0;
 }
 
-.dark [data-theme="light"] {
-  display: none;
-}
-
-.dark [data-theme="dark"] {
-  display: block;
-}
-
-[data-rehype-pretty-code-fragment] {
-  @apply relative text-white;
-}
-
-[data-rehype-pretty-code-fragment] code {
-  @apply grid min-w-full break-words rounded-none border-0 bg-transparent p-0;
+[data-rehype-pretty-code-figure] code[data-line-numbers] {
   counter-reset: line;
-  box-decoration-break: clone;
 }
 
-[data-rehype-pretty-code-fragment] .line {
-  @apply px-4 min-h-[1rem] py-0.5 w-full inline-block;
-}
-
-[data-rehype-pretty-code-fragment] [data-line-numbers] .line {
-  @apply px-2;
-}
-
-[data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
-  @apply text-zinc-50/40 text-xs;
+[data-rehype-pretty-code-figure] code[data-line-numbers] > [data-line]::before {
   counter-increment: line;
   content: counter(line);
-  display: inline-block;
-  width: 1.8rem;
-  margin-right: 1.4rem;
-  text-align: right;
+  @apply mr-4 inline-block w-4 text-right text-muted-foreground text-xs;
 }
 
-[data-rehype-pretty-code-fragment] .line--highlighted {
-  @apply bg-zinc-700/50;
+[data-rehype-pretty-code-figure] [data-line] {
+  @apply border-l-2 border-l-transparent px-3;
 }
 
-[data-rehype-pretty-code-fragment] .line-highlighted span {
-  @apply relative;
+[data-rehype-pretty-code-figure] [data-highlighted-line] {
+  @apply border-l border-primary bg-accent;
 }
 
-[data-rehype-pretty-code-fragment] .word--highlighted {
-  @apply rounded-md bg-zinc-700/50 border-zinc-700/70 p-1;
+[data-rehype-pretty-code-figure] [data-highlighted-chars] {
+  @apply rounded bg-zinc-600/50;
+  box-shadow: 0 0 0 4px rgb(82 82 91 / 0.5);
 }
 
-.dark [data-rehype-pretty-code-fragment] .word--highlighted {
-  @apply bg-zinc-900;
-}
-
-[data-rehype-pretty-code-title] {
-  @apply mt-2 pt-6 px-4 text-sm font-medium;
-}
-
-[data-rehype-pretty-code-title] + pre {
-  @apply mt-2;
-}
-
-.mdx > .steps:first-child > h3:first-child {
-  @apply mt-0;
-}
-
-.steps > h3 {
-  @apply mt-8 mb-4 text-base font-semibold;
+[data-rehype-pretty-code-figure] [data-chars-id] {
+  @apply border-b-2 p-1 shadow-none;
 }
 
 .subheading-anchor {
-  @apply no-underline;
+  @apply no-underline hover:underline;
 }
