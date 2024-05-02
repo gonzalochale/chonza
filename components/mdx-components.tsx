@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/accordion";
 import { ComponentPreview } from "./component-preview";
 import { Badge } from "./ui/badge";
+import CodeBlockWrapper from "./code-block-wrapper";
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -25,6 +26,7 @@ const components = {
   Image,
   Badge,
   ComponentPreview,
+  CodeBlockWrapper,
   Tabs: ({ className, ...props }: React.ComponentProps<typeof Tabs>) => (
     <Tabs className={cn("relative mt-6 w-full", className)} {...props} />
   ),

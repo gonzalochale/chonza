@@ -17,6 +17,7 @@ The radar component is a great way to draw attention to a specific button on the
 
 Set up the radial gradient background in the ***tailwind.config.ts*** file.
 
+<CodeBlockWrapper size="full">
 ```ts {6-9} 
 import type { Config } from "tailwindcss";
 
@@ -33,11 +34,13 @@ const config = {
 
 export default config;
 ```
+</CodeBlockWrapper>
 
 ## Code
 
 Copy the following code to your component file for example ***radar.tsx***.
 
+<CodeBlockWrapper size="wrapper">
 ```tsx
 "use client";
 
@@ -81,11 +84,13 @@ export const RadarComponent = ({ children, href }: RadarProps) => {
 
 export default RadarComponent;
 ```
+</CodeBlockWrapper>
 
 ## Usage
 
 Import the component in your file.
 
+<CodeBlockWrapper size="full">
 ```tsx {1,6-8}
 import RadarComponent from "@/components/radar";
 
@@ -99,3 +104,4 @@ export default function Home() {
   );
 }
 ```
+</CodeBlockWrapper>

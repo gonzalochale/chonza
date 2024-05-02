@@ -1,5 +1,9 @@
+[data-rehype-pretty-code-figure] {
+  @apply p-0 m-0;
+}
+
 [data-rehype-pretty-code-figure] pre {
-  @apply px-0 bg-[#0D0D0C] border;
+  @apply px-0 bg-[#0D0D0C];
 }
 
 [data-rehype-pretty-code-figure] code {

@@ -17,7 +17,8 @@ This component creates a glitch effect banner, crafted with React and Tailwind C
 
 Copy the following code to your component file for example ***glitch-banner.tsx***.
 
-```tsx
+<CodeBlockWrapper size="wrapper">
+  ```tsx
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
@@ -118,11 +119,15 @@ export default function GlitchBanner() {
   );
 }
 ```
+</CodeBlockWrapper>
+
 
 ## Usage
 
 Import the component in your file.
 
+
+<CodeBlockWrapper size="full">
 ```tsx {1,6}
 import GlitchBanner from "@/components/glitch-banner";
 
@@ -134,3 +139,4 @@ export default function Home() {
   );
 }
 ```
+</CodeBlockWrapper>

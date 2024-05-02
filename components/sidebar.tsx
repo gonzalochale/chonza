@@ -15,7 +15,7 @@ export const Sidebar = () => {
       <ScrollArea className="flex flex-col gap-3">
         <div className="flex flex-col gap-5">
           {siteConfig.docs.map((doc) => (
-            <>
+            <div key={doc.title} className="flex flex-col gap-5 items-start">
               <span className="scroll-m-20 text-sm font-medium tracking-tight">
                 {doc.title}
               </span>
@@ -38,7 +38,7 @@ export const Sidebar = () => {
                   {subpage.new && <Badge variant="outline">New</Badge>}
                 </Link>
               ))}
-            </>
+            </div>
           ))}
         </div>
       </ScrollArea>
