@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
   authors: [{ name: siteConfig.author }],
+  metadataBase: new URL(siteConfig.url),
+  openGraph: {
+    images: "/opengraph-image.png",
+  },
 };
 
 export default function RootLayout({
