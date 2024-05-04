@@ -30,11 +30,6 @@ export const siteConfig = {
           path: "/components/glitch",
           new: true,
         },
-        {
-          title: "Radar",
-          path: "/components/radar",
-          new: false,
-        },
       ],
     },
   ],
