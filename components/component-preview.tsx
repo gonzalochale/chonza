@@ -1,7 +1,8 @@
 "use client";
-
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import { ReloadIcon } from "@radix-ui/react-icons";
 
 interface ComponentPreviewProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
@@ -15,34 +16,41 @@ export function ComponentPreview({
   description,
   ...props
 }: ComponentPreviewProps) {
-  const LazyComponent = React.useMemo(() => {
-    return React.lazy(() => import(`@/components/examples/${name}`));
-  }, [name]);
+  const [forceUpdate, setForceUpdate] = useState(false);
+  const [key, setKey] = useState(0);
 
-  if (LazyComponent === null) {
-    return (
-      <div className="w-full min-h-[400px] flex justify-center items-center">
-        Component not found
-      </div>
-    );
-  }
+  const LoadComponent = () => {
+    const LazyComponent = React.useMemo(() => {
+      return React.lazy(() => import(`@/components/examples/${name}`));
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [forceUpdate]);
 
+    return LazyComponent;
+  };
+
+  const reloadComponent = () => {
+    setKey((prevKey) => prevKey + 1);
+  };
+
+  const LazyComponent = LoadComponent();
   return (
     <div
       className={cn(
-        "bg-card border rounded-[1rem] w-full min-h-[400px] flex justify-center items-center overflow-hidden"
+        "relative bg-card border rounded-[1rem] w-full min-h-[500px] flex justify-center items-center overflow-hidden p-4"
       )}
       {...props}
     >
-      <Suspense
-        fallback={
-          <div className="w-full min-h-[400px] flex justify-center items-center overflow-hidden">
-            Loading...
-          </div>
-        }
-      >
-        <LazyComponent />
+      <Suspense fallback={<div></div>}>
+        <LazyComponent key={key} />
       </Suspense>
+      <Button
+        size="icon"
+        variant="outline"
+        className="absolute top-5 right-5"
+        onClick={reloadComponent}
+      >
+        <ReloadIcon />
+      </Button>
     </div>
   );
 }

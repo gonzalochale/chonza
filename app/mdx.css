@@ -38,5 +38,5 @@
 }
 
 .subheading-anchor {
-  @apply no-underline;
+  @apply no-underline font-semibold;
 }
