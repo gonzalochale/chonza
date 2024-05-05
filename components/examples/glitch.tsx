@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
+import { motion } from "framer-motion";
 
 interface Word {
   text: string;
@@ -65,8 +66,18 @@ export default function GlitchBanner() {
   }, [currentText, glitchActive, words, currentWordIndex]);
 
   return (
-    <section className="w-full h-[400px] flex justify-center">
-      <h1 className="flex flex-col justify-center w-full h-full text-black dark:text-white max-w-2xl max-lg:text-5xl text-7xl font-extrabold max-lg:text-center tracking-tighter">
+    <section className="w-full h-[400px] flex justify-center p-4">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          type: "spring",
+          bounce: 0.25,
+          duration: 0.6,
+          delay: 0.3,
+        }}
+        className="flex flex-col justify-center w-full h-full text-black dark:text-white text-5xl sm:text-6xl md:text-7xl font-black max-lg:text-center tracking-tighter"
+      >
         BUILDING
         <span style={{ color: currentText.color }}>
           {currentText.text.split("").map((char, index) => (
@@ -93,7 +104,7 @@ export default function GlitchBanner() {
           ))}
         </span>
         PRODUCTS
-      </h1>
+      </motion.h1>
     </section>
   );
 }
