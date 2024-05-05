@@ -16,11 +16,16 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: siteConfig.name,
   description: siteConfig.description,
-  authors: [{ name: siteConfig.author }],
+  authors: [{ name: siteConfig.author, url: siteConfig.links.twitter }],
+  creator: siteConfig.author,
   metadataBase: new URL(siteConfig.url),
   openGraph: {
     images: "/opengraph-image.png",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  keywords: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
 };
 
 export default function RootLayout({
