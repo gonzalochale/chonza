@@ -66,11 +66,13 @@ export function Header() {
             href={siteConfig.links.twitter}
             target="_blank"
             rel="noreferrer noopener"
+            aria-label="Follow on Twitter"
           >
             <Button
               variant="outline"
               size="sm"
               className="flex gap-3 items-center max-md:h-9 max-md:w-9 max-md:px-0"
+              aria-label="Follow on Twitter"
             >
               <span className="hidden md:block">Follow on</span>{" "}
               <Icons.twitter />
@@ -80,11 +82,13 @@ export function Header() {
             href={siteConfig.links.github}
             target="_blank"
             rel="noreferrer noopener"
+            aria-label="Give a star on GitHub"
           >
             <Button
               variant="outline"
               size="sm"
               className="flex gap-3 items-center max-md:h-9 max-md:w-9 max-md:px-0"
+              aria-label="Give a star on GitHub"
             >
               <span className="hidden md:block">Give a star</span>{" "}
               <Icons.github />

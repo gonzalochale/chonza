@@ -24,7 +24,7 @@ export function MobileNav() {
     <div className="md:hidden flex gap-10 w-full items-center">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger asChild>
-          <Button size="icon" variant="outline">
+          <Button size="icon" variant="outline" aria-label="Open navigation">
             <HamburgerMenuIcon />
           </Button>
         </SheetTrigger>

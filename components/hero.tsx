@@ -123,7 +123,7 @@ export default function Hero() {
           </span>
           STARTS HERE
         </motion.h1>
-        <motion.h3
+        <motion.h2
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -135,7 +135,7 @@ export default function Hero() {
           className="scroll-m-20 text-sm sm:text-base font-medium tracking-tight text-muted-foreground flex gap-3 items-end max-md:justify-center"
         >
           with TailwindCSS and Framer Motion.
-        </motion.h3>
+        </motion.h2>
       </div>
       <div className="flex w-full h-full"></div>
     </section>
