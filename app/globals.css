@@ -74,3 +74,15 @@
     -webkit-mask: linear-gradient(to bottom, transparent, black 50%, black 50%, transparent);
     mask: linear-gradient(to bottom, transparent, black 50%, black 50%, transparent);
   }
+
+  @keyframes slide-left {
+    to {
+       transform: translateX(calc(-50% - 0.5rem));
+     }
+   }
+
+  @keyframes slide-right {
+    to {
+       transform: translateX(calc(50% + 0.5rem));
+     }
+   }

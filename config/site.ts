@@ -26,8 +26,13 @@ export const siteConfig = {
       path: "/components/radar",
       subpages: [
         {
-          title: "Glitch",
+          title: "Glitch Banner",
           path: "/components/glitch",
+          new: false,
+        },
+        {
+          title: "Testimonials",
+          path: "/components/testimonials",
           new: true,
         },
       ],

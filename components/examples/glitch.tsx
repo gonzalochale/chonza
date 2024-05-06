@@ -76,7 +76,7 @@ export default function GlitchBanner() {
           duration: 0.6,
           delay: 0.3,
         }}
-        className="flex flex-col justify-center w-full h-full text-black dark:text-white text-5xl sm:text-6xl md:text-7xl font-black max-lg:text-center tracking-tighter"
+        className="flex flex-col justify-center w-full h-full text-white text-5xl sm:text-6xl md:text-7xl font-black max-lg:text-center tracking-tighter"
       >
         BUILDING
         <span style={{ color: currentText.color }}>

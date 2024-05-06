@@ -36,7 +36,7 @@ export function ComponentPreview({
   return (
     <div
       className={cn(
-        "relative bg-card border rounded-[1rem] w-full min-h-[500px] flex justify-center items-center overflow-hidden p-4"
+        "relative bg-[#0D0D0C] border rounded-[1rem] w-full h-[550px] flex justify-center items-center overflow-hidden p-4"
       )}
       {...props}
     >
@@ -46,7 +46,7 @@ export function ComponentPreview({
       <Button
         size="icon"
         variant="outline"
-        className="absolute top-5 right-5"
+        className="absolute top-2 right-2"
         onClick={reloadComponent}
       >
         <ReloadIcon />
