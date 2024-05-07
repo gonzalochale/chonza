@@ -1,8 +1,7 @@
 export const siteConfig = {
   name: "Chonza",
   url: "https://chonza.vercel.app",
-  description:
-    "Chonza is a React UI Library built with TailwindCSS and Framer Motion.",
+  description: "Chonza is a UI Library built with React and TailwindCSS.",
   author: "Gonzalo Chalé",
   links: {
     twitter: "https://twitter.com/gonzalochale",

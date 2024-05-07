@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Chonza is a collection of components and styles that can be used to build web applications. It is designed to be simple and easy to integrate into your **ReactJS** and **NextJS** projects, using **TailwindCSS** and **Framer Motion**.
+Chonza is a collection of components and styles that can be used to build web applications. It is designed to be simple and easy to integrate into your **ReactJS** and **NextJS** projects.
 
 ## Features
 
@@ -24,8 +24,6 @@ Dependencies:
 
 - **TailwindCSS**: Chonza uses TailwindCSS for styling, so you need to have TailwindCSS installed in your project.
 
-- **Framer Motion**: Chonza uses Framer Motion for animations, so you need to have Framer Motion installed in your project.
-
 ## Credits
 
-Chonza is inspired by other libraries like **ShadCN** and **MagicUI** so I want to give them credit for their work and inspiration, also I want to thank the **TailwindCSS** and **Framer Motion** teams for their amazing work.
+Chonza is inspired by other libraries like **ShadCN** and **MagicUI** so I want to give them credit for their work and inspiration, also I want to thank the **TailwindCSS** team for their amazing work.

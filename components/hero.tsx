@@ -134,7 +134,7 @@ export default function Hero() {
           }}
           className="scroll-m-20 text-sm sm:text-base font-medium tracking-tight text-muted-foreground flex gap-3 items-end max-md:justify-center"
         >
-          with TailwindCSS and Framer Motion.
+          Built with React and TailwindCSS.
         </motion.h2>
       </div>
       <div className="flex w-full h-full"></div>

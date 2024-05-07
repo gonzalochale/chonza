@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Testimonials() {
@@ -90,10 +89,7 @@ export default function Testimonials() {
   const dobleTestimonials = testimonials.concat(testimonials);
 
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, type: "spring", bounce: 0.3 }}
+    <section
       className="relative w-full max-w-3xl h-[500px] flex flex-col justify-center select-none overflow-hidden bg-[#0D0D0C] text-white"
       style={{
         WebkitMask:
@@ -124,7 +120,7 @@ export default function Testimonials() {
             }}
           >
             {dobleTestimonials.map((testimonial) => (
-              <motion.div
+              <div
                 key={testimonial.id}
                 className="w-[300px] flex flex-col items-center gap-3 justify-center border bg-[#10100F] border-[#303030] rounded-[1rem] p-2"
               >
@@ -166,11 +162,11 @@ export default function Testimonials() {
                     {testimonial.testimonial}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
       ))}
-    </motion.section>
+    </section>
   );
 }
