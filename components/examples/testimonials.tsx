@@ -122,7 +122,7 @@ export default function Testimonials() {
             {dobleTestimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="w-[300px] flex flex-col items-center gap-3 justify-center border bg-[#10100F] border-[#303030] rounded-[1rem] p-2"
+                className="w-[330px] flex flex-col items-center gap-2 justify-center border bg-[#10100F] border-[#303030] rounded-[1rem] p-2"
               >
                 <div className="w-full items-center flex gap-2">
                   <div className="relative flex justify-center items-center h-10 w-10 shrink-0 overflow-hidden rounded-full">
