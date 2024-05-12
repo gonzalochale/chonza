@@ -18,15 +18,20 @@ This component creates a testimonials section, crafted with React and Tailwind C
 Add the animation to your ***tailwind.config.ts*** file.
 
 <CodeBlockWrapper size="full">
-```ts {4-6} {9-10}
+```ts {4-9} {13-15}
   theme: {
     extend: {
       keyframes: {
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(1rem)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
         slide: {
           to: { transform: "translateX(calc(-50% - 0.5rem))" },
         },
       },
       animation: {
+        "fade-in": "fade-in 0.3s ease-in-out forwards",
         slide: "slide 120s linear infinite",
         "slide-reverse": "slide 120s linear infinite reverse",
       },
