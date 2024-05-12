@@ -39,7 +39,6 @@ export const siteConfig = {
           path: "/components/testimonials",
           new: true,
         },
-        ,
         {
           title: "Logo Roll",
           path: "/components/logo-roll",
