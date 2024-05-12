@@ -45,7 +45,7 @@ export function ComponentPreview({
       </Suspense>
       <Button
         size="icon"
-        variant="outline"
+        variant="ghost"
         className="absolute top-2 right-2"
         onClick={reloadComponent}
       >

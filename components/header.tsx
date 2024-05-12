@@ -28,7 +28,7 @@ export function Header() {
                 size="sm"
                 className={cn(
                   "hover:no-underline text-muted-foreground hover:text-foreground",
-                  pathname === "/docs" && "text-foreground"
+                  pathname.includes("docs") && "text-foreground"
                 )}
               >
                 Docs

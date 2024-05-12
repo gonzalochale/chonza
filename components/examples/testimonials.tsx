@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-"use client";
-import { useState } from "react";
 
 export default function Testimonials() {
   const testimonials = [
@@ -85,19 +83,17 @@ export default function Testimonials() {
         "Chonza transformed how we approach development with intuitive design and powerful features.",
     },
   ];
-  const [isHovered, setIsHovered] = useState(false);
   const dobleTestimonials = testimonials.concat(testimonials);
 
   return (
     <section
       className="relative w-full max-w-3xl h-[500px] flex flex-col justify-center select-none overflow-hidden bg-[#0D0D0C] text-white"
       style={{
+        animation: "fade-in 0.6s ease-in-out forwards",
         WebkitMask:
           "linear-gradient(90deg, transparent, black 20%, black 80%, transparent)",
         mask: "linear-gradient(90deg, transparent, black 20%, black 80%, black transparent)",
       }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       {Array.from({ length: 3 }).map((_, i) => (
         <div
@@ -113,7 +109,6 @@ export default function Testimonials() {
               flexWrap: "nowrap",
               padding: "0.5rem",
               gap: "1rem",
-              animationPlayState: isHovered ? "paused" : "running",
               animation: `slide-${
                 i % 2 === 0 ? "left" : "right"
               } 240s linear infinite`,
