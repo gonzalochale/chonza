@@ -13,25 +13,34 @@ This component creates a logo roll section, crafted with React and Tailwind CSS.
 
 <ComponentPreview name="logo-roll"/> 
 
-***The logos used in the preview are for demonstration purposes only, they were taken from [svgl.app](https://svgl.app/).***
+***Note:*** The logos used in the preview are for demonstration purposes only, they were taken from [svgl.app](https://svgl.app/).
 
 ## Configuration
 
-Add the following code to your globals css file for example ***globals.css***.
+Add the animation to your ***tailwind.config.ts*** file.
 
 <CodeBlockWrapper size="full">
-```css
-@keyframes slide-logos {
-  to {
-    transform: translateX(calc(-50% - 2rem));
+```ts {4-6} {9}
+  theme: {
+    extend: {
+      keyframes: {
+        "slide-logos": {
+          to: { transform: "translateX(calc(-50% - 2rem))" },
+        },
+      },
+      animation: {
+        "slide-logos": "slide-logos 40s linear infinite",
+      },
+    },
   }
-}
 ```
 </CodeBlockWrapper>
 
+***Note:*** This is not the entire configuration file, only the relevant parts are shown. Make sure to include the new configuration inside the ***theme*** object.
+
 ## Code
 
-Copy the following code to your component file for example ***testimonials.tsx***.
+Copy the following code to your component ***testimonials.tsx***.
 
 <CodeBlockWrapper size="wrapper">
 ```tsx
@@ -64,15 +73,7 @@ export default function LogoRoll() {
       }}
     >
       <div className="w-full h-fit max-w-3xl flex flex-col justify-center select-none overflow-hidden">
-        <div
-          style={{
-            width: "max-content",
-            display: "flex",
-            flexWrap: "nowrap",
-            gap: "4rem",
-            animation: "slide-logos 40s linear infinite",
-          }}
-        >
+        <div className="w-max flex flex-nowrap gap-[4rem] animate-slide-logos">
           {dobleLogos.map((logo, index) => (
             <img
               key={index}

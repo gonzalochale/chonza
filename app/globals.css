@@ -97,32 +97,3 @@
     transparent
   );
 }
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(1rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slide-logos {
-  to {
-    transform: translateX(calc(-50% - 2rem));
-  }
-}
-
-@keyframes slide-left {
-  to {
-    transform: translateX(calc(-50% - 0.5rem));
-  }
-}
-
-@keyframes slide-right {
-  to {
-    transform: translateX(calc(50% + 0.5rem));
-  }
-}

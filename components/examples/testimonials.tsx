@@ -87,9 +87,8 @@ export default function Testimonials() {
 
   return (
     <section
-      className="relative w-full max-w-3xl h-[500px] flex flex-col justify-center select-none overflow-hidden bg-[#0D0D0C] text-white"
+      className="relative w-full max-w-3xl h-[500px] flex flex-col justify-center select-none overflow-hidden bg-[#0D0D0C] text-white animate-fade-in"
       style={{
-        animation: "fade-in 0.6s ease-in-out forwards",
         WebkitMask:
           "linear-gradient(90deg, transparent, black 20%, black 80%, transparent)",
         mask: "linear-gradient(90deg, transparent, black 20%, black 80%, black transparent)",
@@ -98,21 +97,12 @@ export default function Testimonials() {
       {Array.from({ length: 3 }).map((_, i) => (
         <div
           key={i}
-          className={`w-full h-fit max-w-3xl flex flex-col gap-[1rem] justify-center select-none overflow-hidden ${
-            i % 2 === 0 ? null : "items-end"
-          }`}
+          className={`w-full h-fit max-w-3xl flex flex-col gap-[1rem] justify-center select-none overflow-hidden`}
         >
           <div
-            style={{
-              width: "max-content",
-              display: "flex",
-              flexWrap: "nowrap",
-              padding: "0.5rem",
-              gap: "1rem",
-              animation: `slide-${
-                i % 2 === 0 ? "left" : "right"
-              } 240s linear infinite`,
-            }}
+            className={`w-max flex flex-nowrap p-[0.5rem] gap-[1rem] ${
+              i % 2 === 0 ? "animate-slide" : "animate-slide-reverse"
+            }`}
           >
             {dobleTestimonials.map((testimonial) => (
               <div

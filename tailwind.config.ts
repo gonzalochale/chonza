@@ -75,10 +75,24 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "slide-logos": {
+          to: { transform: "translateX(calc(-50% - 2rem))" },
+        },
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(1rem)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        slide: {
+          to: { transform: "translateX(calc(-50% - 0.5rem))" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "slide-logos": "slide-logos 40s linear infinite",
+        "fade-in": "fade-in 0.3s ease-in-out forwards",
+        slide: "slide 120s linear infinite",
+        "slide-reverse": "slide 120s linear infinite reverse",
       },
     },
   },

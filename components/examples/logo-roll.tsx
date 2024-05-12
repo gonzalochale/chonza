@@ -27,15 +27,7 @@ export default function LogoRoll() {
       }}
     >
       <div className="w-full h-fit max-w-3xl flex flex-col justify-center select-none overflow-hidden">
-        <div
-          style={{
-            width: "max-content",
-            display: "flex",
-            flexWrap: "nowrap",
-            gap: "4rem",
-            animation: "slide-logos 40s linear infinite",
-          }}
-        >
+        <div className="w-max flex flex-nowrap gap-[4rem] animate-slide-logos">
           {dobleLogos.map((logo, index) => (
             <img
               key={index}

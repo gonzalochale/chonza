@@ -15,34 +15,27 @@ This component creates a testimonials section, crafted with React and Tailwind C
 
 ## Configuration
 
-Add the following code to your globals css file for example ***globals.css***.
+Add the animation to your ***tailwind.config.ts*** file.
 
 <CodeBlockWrapper size="full">
-```css
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(1rem);
+```ts {4-6} {9-10}
+  theme: {
+    extend: {
+      keyframes: {
+        slide: {
+          to: { transform: "translateX(calc(-50% - 0.5rem))" },
+        },
+      },
+      animation: {
+        slide: "slide 120s linear infinite",
+        "slide-reverse": "slide 120s linear infinite reverse",
+      },
+    },
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-}
-@keyframes slide-left {
-    to {
-        transform: translateX(calc(-50% - 0.5rem));
-     }
-   }
-
-@keyframes slide-right {
-    to {
-        transform: translateX(calc(50% + 0.5rem));
-    }
-}
 ```
 </CodeBlockWrapper>
+
+***Note:*** This is not the entire configuration file, only the relevant parts are shown. Make sure to include the new configuration inside the ***theme*** object.
 
 ## Code
 
@@ -139,9 +132,8 @@ export default function Testimonials() {
 
   return (
     <section
-      className="relative w-full max-w-3xl h-[500px] flex flex-col justify-center select-none overflow-hidden bg-[#0D0D0C] text-white"
+      className="relative w-full max-w-3xl h-[500px] flex flex-col justify-center select-none overflow-hidden bg-[#0D0D0C] text-white animate-fade-in"
       style={{
-        animation: "fade-in 0.6s ease-in-out forwards",
         WebkitMask:
           "linear-gradient(90deg, transparent, black 20%, black 80%, transparent)",
         mask: "linear-gradient(90deg, transparent, black 20%, black 80%, black transparent)",
@@ -150,21 +142,12 @@ export default function Testimonials() {
       {Array.from({ length: 3 }).map((_, i) => (
         <div
           key={i}
-          className={`w-full h-fit max-w-3xl flex flex-col gap-[1rem] justify-center select-none overflow-hidden ${
-            i % 2 === 0 ? null : "items-end"
-          }`}
+          className={`w-full h-fit max-w-3xl flex flex-col gap-[1rem] justify-center select-none overflow-hidden`}
         >
           <div
-            style={{
-              width: "max-content",
-              display: "flex",
-              flexWrap: "nowrap",
-              padding: "0.5rem",
-              gap: "1rem",
-              animation: `slide-${
-                i % 2 === 0 ? "left" : "right"
-              } 240s linear infinite`,
-            }}
+            className={`w-max flex flex-nowrap p-[0.5rem] gap-[1rem] ${
+              i % 2 === 0 ? "animate-slide" : "animate-slide-reverse"
+            }`}
           >
             {dobleTestimonials.map((testimonial) => (
               <div
