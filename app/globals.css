@@ -109,6 +109,12 @@
   }
 }
 
+@keyframes slide-logos {
+  to {
+    transform: translateX(calc(-50% - 2rem));
+  }
+}
+
 @keyframes slide-left {
   to {
     transform: translateX(calc(-50% - 0.5rem));

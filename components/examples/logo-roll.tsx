@@ -26,11 +26,14 @@ export default function LogoRoll() {
         mask: "linear-gradient(90deg, transparent, black 20%, black 80%, black transparent)",
       }}
     >
-      <div className="flex w-full max-w-3xl gap-[1rem]">
+      <div className="w-full h-fit max-w-3xl flex flex-col justify-center select-none overflow-hidden">
         <div
-          className="w-max flex gap-[4rem]"
           style={{
-            animation: "slide-left 30s linear infinite",
+            width: "max-content",
+            display: "flex",
+            flexWrap: "nowrap",
+            gap: "4rem",
+            animation: "slide-logos 40s linear infinite",
           }}
         >
           {dobleLogos.map((logo, index) => (
