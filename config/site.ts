@@ -19,8 +19,13 @@ export const siteConfig = {
           new: false,
         },
         {
-          title: "Install Next JS",
+          title: "Installation",
           path: "/docs/creating-a-new-project",
+          new: false,
+        },
+        {
+          title: "Changelog",
+          path: "/docs/changelog",
           new: false,
         },
       ],
