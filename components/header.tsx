@@ -11,6 +11,9 @@ import { MobileNav } from "./mobile-nav";
 
 export function Header() {
   const pathname = usePathname();
+  const newComponent =
+    siteConfig.components.find((component) => component.new) ||
+    siteConfig.components[0];
   return (
     <header className="sticky top-0 z-50 border-b bg-background">
       <div className="max-md:px-4 md:container h-12 flex justify-center items-center">
@@ -34,7 +37,7 @@ export function Header() {
                 Docs
               </Button>
             </Link>
-            <Link href="/components/glitch">
+            <Link href={newComponent.path}>
               <Button
                 variant="link"
                 size="sm"

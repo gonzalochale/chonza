@@ -10,46 +10,36 @@ export const siteConfig = {
   },
   docs: [
     {
-      title: "Getting Started",
+      title: "Introduction",
       path: "/docs",
-      subpages: [
-        {
-          title: "Introduction",
-          path: "/docs",
-          new: false,
-        },
-        {
-          title: "Installation",
-          path: "/docs/creating-a-new-project",
-          new: false,
-        },
-        {
-          title: "Changelog",
-          path: "/docs/changelog",
-          new: false,
-        },
-      ],
+      new: false,
     },
     {
-      title: "Components",
-      path: "/components/radar",
-      subpages: [
-        {
-          title: "Glitch Banner",
-          path: "/components/glitch",
-          new: false,
-        },
-        {
-          title: "Testimonials",
-          path: "/components/testimonials",
-          new: true,
-        },
-        {
-          title: "Logo Roll",
-          path: "/components/logo-roll",
-          new: true,
-        },
-      ],
+      title: "Installation",
+      path: "/docs/creating-a-new-project",
+      new: false,
+    },
+    {
+      title: "Changelog",
+      path: "/docs/changelog",
+      new: false,
+    },
+  ],
+  components: [
+    {
+      title: "Glitch Banner",
+      path: "/components/glitch",
+      new: false,
+    },
+    {
+      title: "Testimonials",
+      path: "/components/testimonials",
+      new: false,
+    },
+    {
+      title: "Logo Roll",
+      path: "/components/logo-roll",
+      new: true,
     },
   ],
 };

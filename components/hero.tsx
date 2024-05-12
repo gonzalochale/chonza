@@ -2,8 +2,12 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { Icons } from "./icons";
+import { siteConfig } from "@/config/site";
 
 export default function Hero() {
+  const newComponent =
+    siteConfig.components.find((component) => component.new) ||
+    siteConfig.components[0];
   return (
     <section className="w-full max-w-3xl container px-4 py-10">
       <div className="flex flex-col justify-center space-y-4 text-center">
@@ -17,7 +21,7 @@ export default function Hero() {
           </p>
         </div>
         <div className="flex gap-2 justify-center">
-          <Link href="/components/glitch">
+          <Link href={newComponent.path}>
             <Button>Explore all components</Button>
           </Link>
           <Link href="#">

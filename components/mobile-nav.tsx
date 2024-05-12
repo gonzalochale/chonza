@@ -20,6 +20,8 @@ import { Badge } from "./ui/badge";
 export function MobileNav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  siteConfig.components.sort((a, b) => a.title.localeCompare(b.title));
+
   return (
     <div className="md:hidden flex gap-10 w-full items-center">
       <Sheet open={open} onOpenChange={setOpen}>
@@ -44,35 +46,55 @@ export function MobileNav() {
             </SheetTitle>
             <ScrollArea className="flex flex-col gap-3">
               <div className="flex flex-col gap-5 items-start mt-5">
-                {siteConfig.docs.map((doc) => (
-                  <div
-                    key={doc.title}
-                    className="flex flex-col gap-5 items-start"
-                  >
-                    <span className="scroll-m-20 text-base font-medium tracking-tight">
-                      {doc.title}
-                    </span>
-                    {doc.subpages.map((subpage) => (
-                      <Link
-                        key={subpage.path}
-                        href={subpage.path}
-                        onClick={() => setOpen(false)}
-                        className="flex items-center gap-3"
+                <div className="flex flex-col gap-5 items-start">
+                  <span className="scroll-m-20 text-sm font-medium tracking-tight">
+                    Getting Started
+                  </span>
+                  {siteConfig.docs.map((doc) => (
+                    <Link
+                      key={doc.path}
+                      href={doc.path}
+                      className="flex items-center gap-3"
+                      onClick={() => setOpen(false)}
+                    >
+                      <Button
+                        variant="link"
+                        size="sm"
+                        className={cn(
+                          "hover:no-underline text-muted-foreground hover:text-foreground px-0",
+                          pathname === `${doc.path}` && "text-foreground"
+                        )}
                       >
-                        <Button
-                          variant="link"
-                          className={cn(
-                            "hover:no-underline text-muted-foreground hover:text-foreground px-0",
-                            pathname === `${subpage.path}` && "text-foreground"
-                          )}
-                        >
-                          {subpage.title}
-                        </Button>
-                        {subpage.new && <Badge variant="outline">New</Badge>}
-                      </Link>
-                    ))}
-                  </div>
-                ))}
+                        {doc.title}
+                      </Button>
+                    </Link>
+                  ))}
+                </div>
+                <div className="flex flex-col gap-5 items-start">
+                  <span className="scroll-m-20 text-sm font-medium tracking-tight">
+                    Components
+                  </span>
+                  {siteConfig.components.map((component) => (
+                    <Link
+                      key={component.path}
+                      href={component.path}
+                      className="flex items-center gap-3"
+                      onClick={() => setOpen(false)}
+                    >
+                      <Button
+                        variant="link"
+                        size="sm"
+                        className={cn(
+                          "hover:no-underline text-muted-foreground hover:text-foreground px-0",
+                          pathname === `${component.path}` && "text-foreground"
+                        )}
+                      >
+                        {component.title}
+                      </Button>
+                      {component.new && <Badge variant="outline">New</Badge>}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </ScrollArea>
           </SheetHeader>
