@@ -85,6 +85,16 @@ const config = {
         slide: {
           to: { transform: "translateX(calc(-50% - 0.5rem))" },
         },
+        shine: {
+          from: {
+            opacity: "0",
+            transform: "translate(0%,-100%) scale(0.5) skew(-15deg)",
+          },
+          to: {
+            opacity: "1",
+            transform: "translate(150%,-50%) scale(1.5) skew(-30deg)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -93,6 +103,7 @@ const config = {
         "fade-in": "fade-in 0.3s ease-in-out forwards",
         slide: "slide 120s linear infinite",
         "slide-reverse": "slide 120s linear infinite reverse",
+        shine: "shine 2s ease forwards",
       },
     },
   },
