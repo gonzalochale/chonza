@@ -18,18 +18,20 @@ This component creates a shine effect, recieves a children prop that will be the
 Add the animation to your ***tailwind.config.ts*** file.
 
 <CodeBlockWrapper size="full">
-```ts {4-13} {16}
+```ts {4-15} {18}
   theme: {
     extend: {
       keyframes: {
         shine: {
-          from: {
+         from: {
             opacity: "0",
-            transform: "translate(0%,-100%) scale(0.5) skew(-5deg)",
+            transform:
+              "translate(0%,-100%) scale(0.5) skew(-5deg) translate3d(0, 0, 0)",
           },
           to: {
             opacity: "1",
-            transform: "translate(150%,-50%) scale(1) skew(-25deg)",
+            transform:
+              "translate(150%,-50%) scale(1) skew(-25deg) translate3d(0, 0, 0)",
           },
         },
       },

@@ -88,11 +88,13 @@ const config = {
         shine: {
           from: {
             opacity: "0",
-            transform: "translate(0%,-100%) scale(0.5) skew(-5deg)",
+            transform:
+              "translate(0%,-100%) scale(0.5) skew(-5deg) translate3d(0, 0, 0)",
           },
           to: {
             opacity: "1",
-            transform: "translate(150%,-50%) scale(1) skew(-25deg)",
+            transform:
+              "translate(150%,-50%) scale(1) skew(-25deg) translate3d(0, 0, 0)",
           },
         },
       },
