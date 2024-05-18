@@ -1,0 +1,54 @@
+/* eslint-disable @next/next/no-img-element */
+
+export default function Logos() {
+  /*
+  all of the logos were taken from thtps://svgl.app/ 
+  */
+  const logos = [
+    { src: "/logos/tailwindcss.svg", alt: "TailwindCSS logo" },
+    { src: "/logos/react.svg", alt: "React logo" },
+    { src: "/logos/typescript.svg", alt: "Typescript logo" },
+    { src: "/logos/javascript.svg", alt: "JavaScript logo" },
+    { src: "/logos/css.svg", alt: "CSS logo" },
+    { src: "/logos/html5.svg", alt: "HTML 5 logo" },
+    { src: "/logos/git.svg", alt: "GIT logo" },
+    { src: "/logos/vscode.svg", alt: "VS Code logo" },
+  ];
+
+  const dobleLogos = logos.concat(logos);
+
+  return (
+    <section
+      className="w-full max-w-3xl overflow-hidden select-none flex flex-col justify-center gap-10 text-center font-medium text-muted-foreground"
+      style={{
+        WebkitMask:
+          "linear-gradient(90deg, transparent, black 20%, black 80%, transparent)",
+        mask: "linear-gradient(90deg, transparent, black 20%, black 80%, black transparent)",
+      }}
+    >
+      <span>built with</span>
+      <div className="w-full h-fit max-w-3xl flex flex-col justify-center select-none overflow-hidden">
+        <div className="w-max flex flex-nowrap gap-[4rem] animate-slide-logos">
+          {dobleLogos.map((logo, index) => (
+            <img
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              loading="eager"
+              className="size-10 object-contain"
+            />
+          ))}
+          {dobleLogos.map((logo, index) => (
+            <img
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              loading="eager"
+              className="size-10 object-contain"
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

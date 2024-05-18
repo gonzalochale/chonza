@@ -49,7 +49,7 @@ export default function RootLayout({
         >
           <div className="relative flex min-h-dvh flex-col bg-background">
             <Header />
-            <main className="flex flex-1 justify-center items-center">
+            <main className="flex flex-1 justify-center items-start">
               {children}
             </main>
             <Footer />
