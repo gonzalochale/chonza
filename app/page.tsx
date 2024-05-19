@@ -16,7 +16,8 @@ export default function Home() {
                 Your next component starts here
               </span>
               <p className="w-full px-10 md:text-xl lg:text-lg xl:text-xl text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/50">
-                {siteConfig.description}
+                Open source TailwindCSS and React components to jumpstart your
+                next project.
               </p>
             </div>
             <div className="flex gap-2 justify-center">
