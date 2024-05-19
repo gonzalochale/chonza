@@ -1,5 +1,3 @@
-import Hero from "@/components/hero";
-
 export function Shine({ children }: { children?: React.ReactNode }) {
   return (
     <div className="relative w-full h-full flex justify-center items-center overflow-hidden">
@@ -12,7 +10,11 @@ export function Shine({ children }: { children?: React.ReactNode }) {
 export default function ShineExample() {
   return (
     <Shine>
-      <Hero />
+      <section className="py-24">
+        <span className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl/none text-transparent bg-clip-text bg-gradient-to-b from-white to-purple-100">
+          This is the shine component
+        </span>
+      </section>
     </Shine>
   );
 }

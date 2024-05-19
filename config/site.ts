@@ -39,11 +39,16 @@ export const siteConfig = {
     {
       title: "Logo Roll",
       path: "/components/logo-roll",
-      new: true,
+      new: false,
     },
     {
       title: "Shine",
       path: "/components/shine",
+      new: false,
+    },
+    {
+      title: "Hero",
+      path: "/components/hero",
       new: true,
     },
   ],

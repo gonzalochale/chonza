@@ -1,7 +1,7 @@
 ---
-title: Shine 
+title: Shine
 description: Shine effect component.
-date: 2024-05-12    
+date: 2024-05-12
 published: true
 ---
 
@@ -11,11 +11,11 @@ This component creates a shine effect, recieves a children prop that will be the
 
 ## Preview
 
-<ComponentPreview name="shine"/> 
+<ComponentPreview name="shine" />{" "}
 
 ## Configuration
 
-Add the animation to your ***tailwind.config.ts*** file.
+Add the animation to your **_tailwind.config.ts_** file.
 
 <CodeBlockWrapper size="full">
 ```ts {4-15} {18}
@@ -43,11 +43,11 @@ Add the animation to your ***tailwind.config.ts*** file.
 ```
 </CodeBlockWrapper>
 
-***Note:*** This is not the entire configuration file, only the relevant parts are shown. Make sure to include the new configuration inside the ***theme*** object.
+**_Note:_** This is not the entire configuration file, only the relevant parts are shown. Make sure to include the new configuration inside the **_theme_** object.
 
 ## Code
 
-Copy the following code to your component ***shine.tsx*** file.
+Copy the following code to your component **_shine.tsx_** file.
 
 <CodeBlockWrapper size="full">
 ```tsx
@@ -62,24 +62,28 @@ export default function Shine({ children }: { children?: React.ReactNode }) {
 ```
 </CodeBlockWrapper>
 
-
 ## Usage
 
 Import the component in your file, and wrap the element you want to have the shine effect.
 
 <CodeBlockWrapper size="full">
-```tsx {2,7,9} "<Hero />"
-import Hero from "@/components/hero";
+```tsx {1} {6-12}
 import Shine from "@/components/shine";
 
 export default function Home() {
   return (
     <main>
         <Shine>
-            <Hero />
+          <section className="py-24">
+            <span className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl lg:text-5xl/none text-transparent bg-clip-text bg-gradient-to-b from-white to-purple-100">
+            This is the shine component
+            </span>
+          </section>
         </Shine>
     </main>
   );
 }
 ```
-</CodeBlockWrapper>
+</CodeBlockWrapper
+
+>
