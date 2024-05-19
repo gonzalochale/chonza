@@ -24,8 +24,8 @@ function Hero() {
       </div>
       <div className="relative flex justify-center items-center">
         <img
-          src="/static/hero-img.png"
-          alt="Hero examnple image"
+          src="/images/hero-img.png"
+          alt="Hero example image"
           className="z-10 w-full object-contain rounded-[0.5rem] bg-center bg-no-repeat bg-cover border border-[#303030]"
           loading="eager"
         />
