@@ -17,16 +17,20 @@ export default function Logos() {
 
   const dobleLogos = logos.concat(logos);
 
+  // to match the logos with the site style we need to change to black and white the logos adding the filter class to the img tag
+
   return (
     <section
-      className="w-full max-w-3xl overflow-hidden select-none flex flex-col justify-center gap-10 text-center font-medium text-muted-foreground"
+      className="w-full max-w-3xl overflow-hidden select-none flex flex-col justify-center gap-10 text-center font-medium text-muted-foreground animate-hero-in"
       style={{
         WebkitMask:
           "linear-gradient(90deg, transparent, black 20%, black 80%, transparent)",
         mask: "linear-gradient(90deg, transparent, black 20%, black 80%, black transparent)",
       }}
     >
-      <span>built with</span>
+      <span className="w-full px-10 md:text-xl lg:text-lg xl:text-xl text-muted-foreground">
+        Built with
+      </span>
       <div className="w-full h-fit max-w-3xl flex flex-col justify-center select-none overflow-hidden">
         <div className="w-max flex flex-nowrap gap-[4rem] animate-slide-logos">
           {dobleLogos.map((logo, index) => (
@@ -35,7 +39,7 @@ export default function Logos() {
               src={logo.src}
               alt={logo.alt}
               loading="eager"
-              className="size-10 object-contain"
+              className="size-10 object-contain filter grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
             />
           ))}
           {dobleLogos.map((logo, index) => (
@@ -44,7 +48,7 @@ export default function Logos() {
               src={logo.src}
               alt={logo.alt}
               loading="eager"
-              className="size-10 object-contain"
+              className="size-10 object-contain filter grayscale hover:grayscale-0 transition-all duration-300 ease-in-out"
             />
           ))}
         </div>

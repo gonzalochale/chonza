@@ -1,9 +1,7 @@
-import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import { Shine } from "@/components/examples/shine";
 import Logos from "@/components/logos";
-import LogoRoll from "@/components/examples/logo-roll";
 
 export default function Home() {
   return (
