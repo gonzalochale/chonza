@@ -3,10 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Icons } from "@/components/icons";
 import { Shine } from "@/components/examples/shine";
 import Logos from "@/components/logos";
+import LogoRoll from "@/components/examples/logo-roll";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 container justify-center items-center">
       <Shine>
         <section className="w-full h-full max-w-3xl container px-4 py-24">
           <div className="flex flex-col justify-center space-y-4 text-center">
