@@ -1,4 +1,6 @@
-export function Shine({ children }: { children?: React.ReactNode }) {
+import React from "react";
+
+export function Shine({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative w-full h-full flex justify-center items-center overflow-hidden">
       {children}

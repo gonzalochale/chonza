@@ -51,7 +51,9 @@ Copy the following code to your component **_shine.tsx_** file.
 
 <CodeBlockWrapper size="full">
 ```tsx
-export default function Shine({ children }: { children?: React.ReactNode }) {
+import React from "react";
+
+export default function Shine({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative w-full h-full flex justify-center items-center overflow-hidden">
       {children}

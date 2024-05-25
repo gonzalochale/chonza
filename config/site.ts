@@ -51,6 +51,11 @@ export const siteConfig = {
       path: "/components/hero",
       new: true,
     },
+    {
+      title: "Shine Card",
+      path: "/components/shine-card",
+      new: true,
+    },
   ],
 };
 
