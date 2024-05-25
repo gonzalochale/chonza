@@ -3,7 +3,13 @@ import { Icons } from "@/components/icons";
 import { Shine } from "@/components/examples/shine";
 import Logos from "@/components/logos";
 
-export default function Home() {
+export default async function Home() {
+  const getRepoStarts = async () => {
+    const res = await fetch("https://api.github.com/repos/gonzalochale/chonza");
+    const data = await res.json();
+    return data.stargazers_count;
+  };
+  const stars = await getRepoStarts();
   return (
     <div className="flex flex-col gap-10 container justify-center items-center">
       <Shine>
@@ -25,8 +31,14 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="outline" className="flex items-center gap-2">
-                  Star on GitHub <Icons.github />
+                <Button
+                  variant="outline"
+                  className="flex items-center gap-2 group"
+                >
+                  <span className="group-hover:text-yellow-400 transition-all duration-300 ease-in-out">
+                    {stars}
+                  </span>
+                  {stars === 1 ? "star" : "stars"} on GitHub <Icons.github />
                 </Button>
               </a>
             </div>

@@ -64,7 +64,7 @@ export function Header() {
               className="flex gap-3 items-center max-md:h-9 max-md:w-9 max-md:px-0"
               aria-label="Follow on Twitter"
             >
-              <span className="hidden md:block">Follow on X</span>{" "}
+              <span className="hidden md:block">Follow on</span>{" "}
               <Icons.twitter />
             </Button>
           </Link>
@@ -80,7 +80,7 @@ export function Header() {
               className="flex gap-3 items-center max-md:h-9 max-md:w-9 max-md:px-0"
               aria-label="Give a star on GitHub"
             >
-              <span className="hidden md:block">Star on GitHub</span>{" "}
+              <span className="hidden md:block">Give a star</span>{" "}
               <Icons.github />
             </Button>
           </Link>
