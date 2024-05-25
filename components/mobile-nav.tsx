@@ -45,7 +45,7 @@ export function MobileNav() {
               </Link>
             </SheetTitle>
             <ScrollArea className="flex flex-col gap-3">
-              <div className="flex flex-col gap-5 items-start mt-5">
+              <div className="flex flex-col gap-16 items-start mt-5">
                 <div className="flex flex-col gap-5 items-start">
                   <span className="scroll-m-20 text-sm font-medium tracking-tight">
                     Getting Started

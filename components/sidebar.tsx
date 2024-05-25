@@ -15,7 +15,7 @@ export const Sidebar = () => {
   return (
     <aside className="sticky top-[49px] gap-10 py-10 z-50 h-[calc(100dvh-98px)] w-full hidden md:block">
       <ScrollArea className="flex flex-col gap-3">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-16">
           <div className="flex flex-col gap-5 items-start">
             <span className="scroll-m-20 text-sm font-medium tracking-tight">
               Getting Started
