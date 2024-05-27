@@ -5,7 +5,12 @@ import Logos from "@/components/logos";
 
 export default async function Home() {
   const getRepoStarts = async () => {
-    const res = await fetch("https://api.github.com/repos/gonzalochale/chonza");
+    const res = await fetch(
+      "https://api.github.com/repos/gonzalochale/chonza",
+      {
+        cache: "no-store",
+      }
+    );
     const data = await res.json();
     return data.stargazers_count;
   };
