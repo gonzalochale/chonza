@@ -1,6 +1,6 @@
 # Chonza - React components library
 
-![chonza preview](image.png)
+![chonza preview](./public/images/hero-img.png)
 
 ## Introduction
 
