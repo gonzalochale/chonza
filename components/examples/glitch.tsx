@@ -7,7 +7,7 @@ interface Word {
   color: string;
 }
 
-export default function GlitchBanner() {
+export default function Glitch() {
   const words: Word[] = useMemo(
     () => [
       { text: "UNIQUE", color: "#FFB3C0" },
@@ -66,7 +66,7 @@ export default function GlitchBanner() {
 
   return (
     <section className="w-full h-[400px] flex justify-center p-4">
-      <h1 className="flex flex-col justify-center w-full h-full text-white text-5xl sm:text-6xl md:text-7xl font-black max-lg:text-center tracking-tighter">
+      <h1 className="flex flex-col justify-center w-full h-full text-white text-5xl sm:text-6xl md:text-7xl font-black text-center tracking-tighter">
         BUILDING
         <span style={{ color: currentText.color }}>
           {currentText.text.split("").map((char, index) => (

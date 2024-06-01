@@ -27,7 +27,7 @@ export const siteConfig = {
   ],
   components: [
     {
-      title: "Glitch Banner",
+      title: "Glitch",
       path: "/components/glitch",
       new: false,
     },
@@ -47,13 +47,15 @@ export const siteConfig = {
       new: false,
     },
     {
-      title: "Hero",
-      path: "/components/hero",
-      new: true,
-    },
-    {
       title: "Shine Card",
       path: "/components/shine-card",
+      new: true,
+    },
+  ],
+  sections: [
+    {
+      title: "Hero",
+      path: "/components/hero",
       new: true,
     },
   ],
