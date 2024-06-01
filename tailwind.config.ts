@@ -83,7 +83,7 @@ const config = {
           to: { opacity: "1", transform: "translateY(0)" },
         },
         "hero-in": {
-          from: { opacity: "0", transform: "translateY(1.5rem)" },
+          from: { opacity: "0", transform: "translateY(3rem)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
         slide: {
@@ -107,7 +107,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "slide-logos": "slide-logos 40s linear infinite",
         "fade-in": "fade-in 0.3s ease-in-out forwards",
-        "hero-in": "fade-in 0.6s ease forwards",
+        "hero-in": "hero-in 0.6s ease forwards",
         slide: "slide 120s linear infinite",
         "slide-reverse": "slide 120s linear infinite reverse",
         shine: "shine 2s ease forwards",

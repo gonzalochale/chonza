@@ -22,13 +22,13 @@ Add the animation to your **_tailwind.config.ts_** file.
   theme: {
     extend: {
       keyframes: {
-        "hero-in": {
-          from: { opacity: "0", transform: "translateY(1.5rem)" },
+       "hero-in": {
+          from: { opacity: "0", transform: "translateY(3rem)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
-        "hero-in": "fade-in 0.6s ease forwards",
+        "hero-in": "hero-in 0.6s ease forwards",
       },
     },
   }
@@ -46,13 +46,10 @@ import React from "react";
 
 function Hero() {
   return (
-    <section className="w-full max-w-3xl mx-auto flex flex-col justify-center items-center gap-8 bg-[#0D0D0C] py-24">
-      <div className="z-10 flex flex-col gap-3 text-center animate-hero-in">
-        <span className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-transparent bg-clip-text bg-gradient-to-b from-white to-purple-100">
+    <section className="relative w-full max-w-3xl mx-auto flex flex-col justify-center items-center gap-8 bg-[#0D0D0C] py-24">
+      <div className="z-10 flex flex-col gap-5 text-center animate-hero-in">
+        <span className="text-4xl font-medium tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-transparent bg-clip-text bg-gradient-to-b from-white to-purple-100">
           Your next hero component is here!
-        </span>
-        <span className="w-full px-10 md:text-xl lg:text-lg xl:text-xl text-transparent bg-clip-text bg-gradient-to-b from-white to-purple-100">
-          This is a hero component.
         </span>
         <a
           href="https://github.com/gonzalochale/chonza"
@@ -65,16 +62,18 @@ function Hero() {
           </button>
         </a>
       </div>
-      <div className="relative flex justify-center items-center">
+      <div className="relative flex justify-center items-center aspect-video w-full p-2 overflow-hidden">
         <img
           src="/images/hero-img.webp"
           alt="Hero example image"
-          className="z-10 w-full object-contain rounded-[0.5rem] bg-center bg-no-repeat bg-cover border border-[#303030]"
+          className="z-10 w-full rounded-[0.5rem] border border-[#303030]"
           loading="eager"
+          width="1920"
+          height="1080"
         />
-        <span className="absolute -top-20 w-[calc(100%-40%)] h-[calc(100%-40%)] bg-purple-700 blur-[120px]"></span>
-        <span className="absolute z-20 inset-0 w-full h-full bg-gradient-to-b from-transparent via-[#0D0D0C] to-[#0D0D0C]"></span>
+        <span className="absolute z-20 inset-0 w-full h-full bg-gradient-to-b from-transparent to-[#0D0D0C]"></span>
       </div>
+      <span className="absolute top-48 w-[calc(100%-70%)] h-[calc(100%-70%)] bg-purple-700 blur-[120px]"></span>
     </section>
   );
 }
