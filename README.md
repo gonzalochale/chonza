@@ -1,4 +1,6 @@
-# ¿What is Chonza?
+# Chonza - React components library
+
+![chonza preview](image.png)
 
 ## Introduction
 
@@ -6,7 +8,7 @@ Chonza is a collection of components and styles that can be used to build web ap
 
 ## Features
 
-- **Simple**: Chonza is designed to be simple and easy to use. It is built on top of TailwindCSS and Framer Motion, which makes it easy to integrate into your projects.
+- **Simple**: Chonza is designed to be simple and easy to use. It is built on top of TailwindCSS, which makes it easy to integrate into your projects.
 
 - **Customizable**: Chonza is highly customizable. You can easily change the colors, fonts, and other styles to match your brand.
 
