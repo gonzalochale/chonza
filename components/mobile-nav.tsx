@@ -42,6 +42,9 @@ export function MobileNav() {
                 className="flex items-center gap-3 justify-center"
               >
                 {siteConfig.name}
+                <Badge variant="outline" className="text-normal">
+                  Beta
+                </Badge>
               </Link>
             </SheetTitle>
             <ScrollArea className="flex flex-col gap-3">

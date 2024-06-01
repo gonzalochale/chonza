@@ -8,6 +8,7 @@ import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { MobileNav } from "./mobile-nav";
+import { Badge } from "./ui/badge";
 
 export function Header() {
   const pathname = usePathname();
@@ -19,10 +20,13 @@ export function Header() {
       <div className="max-md:px-4 md:container h-12 flex justify-center items-center">
         <MobileNav />
         <nav className="max-md:hidden flex gap-10 w-full items-center">
-          <Link href="/" className="flex gap-2 items-center">
+          <Link href="/" className="flex gap-3 items-center">
             <h1 className="text-lg font-medium tracking-tighter flex gap-1 items-center">
               {siteConfig.name}
             </h1>
+            <Badge variant="outline" className="text-normal">
+              Beta
+            </Badge>
           </Link>
           <div className="flex gap-10 items-center">
             <Link href="/docs">
