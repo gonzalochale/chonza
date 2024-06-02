@@ -39,6 +39,8 @@ Add the animation to your **_tailwind.config.ts_** file.
 
 ## Code
 
+Copy and paste the following code into your component, example **_hero.tsx_**.
+
 <CodeBlockWrapper size="wrapper">
 ```tsx
 /* eslint-disable @next/next/no-img-element */
@@ -46,7 +48,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <section className="relative w-full max-w-3xl mx-auto flex flex-col justify-center items-center gap-8 bg-[#0D0D0C] py-24">
+    <section className="relative w-full max-w-5xl mx-auto flex flex-col justify-center items-center gap-8 bg-[#0D0D0C] py-24">
       <div className="z-10 flex flex-col gap-5 text-center animate-hero-in">
         <span className="text-4xl font-medium tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-transparent bg-clip-text bg-gradient-to-b from-white to-purple-100">
           Your next hero component is here!

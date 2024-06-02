@@ -4,7 +4,7 @@ import { siteConfig } from "@/config/site";
 
 export default function Hero() {
   return (
-    <section className="w-full max-w-3xl container px-4 py-10 text-white">
+    <section className="w-full max-w-5xl container px-4 py-10 text-white">
       <div className="flex flex-col justify-center space-y-4 text-center">
         <div className="space-y-2">
           <span className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-transparent bg-clip-text bg-gradient-to-r from-white to-white/30">
