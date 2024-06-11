@@ -16,7 +16,7 @@ export default async function Home() {
   };
   const stars = await getRepoStarts();
   return (
-    <div className="flex flex-col gap-10 container justify-center items-center">
+    <div className="flex flex-col gap-10 container justify-center items-center bg-background">
       <Shine>
         <section className="w-full h-full max-w-3xl container px-4 py-24">
           <div className="flex flex-col justify-center space-y-4 text-center">

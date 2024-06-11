@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-  keywords: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "TypeScript"],
+  keywords: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
 };
 
 export default function RootLayout({

@@ -19,7 +19,7 @@ function Hero() {
           </button>
         </a>
       </div>
-      <div className="relative flex justify-center items-center aspect-video w-full p-2 overflow-hidden">
+      <div className="relative flex justify-center items-center aspect-video w-full overflow-hidden pt-2">
         <img
           src="/images/hero-img.webp"
           alt="Hero example image"
