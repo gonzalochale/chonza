@@ -51,6 +51,11 @@ export const siteConfig = {
       path: "/components/shine-card",
       new: true,
     },
+    {
+      title: "Button",
+      path: "/components/button",
+      new: true,
+    },
   ],
   sections: [
     {
