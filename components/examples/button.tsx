@@ -1,6 +1,6 @@
 export default function Button() {
   return (
-    <section className="w-full h-full flex justify-center items-center gap-10">
+    <section className="w-full h-full flex max-sm:flex-col justify-center items-center gap-10">
       <button className="relative min-w-[5rem] px-4 py-2 rounded-[12px] bg-gradient-to-b from-[#282828] to-[#10100F] flex justify-center items-center border-2 border-[#10100F] outline outline-2 outline-offset-2 outline-transparent focus:outline-[#282828]">
         <span className="absolute w-[calc(100%-4px)] h-[calc(100%-4px)] rounded-[0.5rem] bg-gradient-to-b from-[#1e1e1c] to-[#10100F] group-hover:opacity-60 transition-all duration-300 ease-in-out"></span>
         <span className="z-10 text-xs text-white/80">Default</span>
