@@ -54,7 +54,7 @@ export function Button({
 
 export default function ButtonExample() {
   return (
-    <div className="flex max-md:flex-col gap-10">
+    <div className="w-full flex max-md:flex-col justify-center items-center gap-10">
       <Button>Default</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="success">Success</Button>

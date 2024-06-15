@@ -72,7 +72,7 @@ export default async function ComponentPage({ params }: ComponentPageProps) {
   }
 
   return (
-    <article className="prose dark:prose-invert justify-start items-start py-10 min-w-full">
+    <article className="prose dark:prose-invert justify-start items-start py-10 min-w-0 w-full max-w-fit">
       <MDXContent code={component.body} />
     </article>
   );
