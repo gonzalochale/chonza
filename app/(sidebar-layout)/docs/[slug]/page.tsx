@@ -21,7 +21,7 @@ export default async function DocsPage({ params }: DocsPageProps) {
   }
 
   return (
-    <article className="prose dark:prose-invert justify-start items-start py-10 min-w-0 max-w-full mdx">
+    <article className="prose dark:prose-invert justify-start items-start py-10 min-w-0 max-w-3xl mdx">
       <MDXContent code={doc.body} />
     </article>
   );

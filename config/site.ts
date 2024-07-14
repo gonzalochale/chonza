@@ -1,11 +1,11 @@
 export const siteConfig = {
-  name: "Chonza",
-  url: "https://chonza.dev",
-  description: "Chonza is a UI Library built with React and TailwindCSS.",
+  name: "AstroUI",
+  url: "https://astroui.vercel.app",
+  description: "AstroUI is a AstroJS UI Library built with TailwindCSS.",
   author: "Gonzalo Chalé",
   links: {
     twitter: "https://x.com/gonzalochale",
-    github: "https://github.com/gonzalochale/chonza",
+    github: "https://github.com/gonzalochale/astroui",
     portfolio: "https://www.gonzalochale.dev",
   },
   docs: [
