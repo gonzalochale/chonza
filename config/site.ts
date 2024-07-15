@@ -14,11 +14,6 @@ export const siteConfig = {
       path: "/docs",
       new: false,
     },
-    {
-      title: "Installation",
-      path: "/docs/creating-a-new-project",
-      new: false,
-    },
   ],
   components: [
     {
@@ -27,13 +22,7 @@ export const siteConfig = {
       new: true,
     },
   ],
-  sections: [
-    {
-      title: "Component Section",
-      path: "/components/component-section",
-      new: true,
-    },
-  ],
+  sections: [],
 };
 
 export type SiteConfig = typeof siteConfig;

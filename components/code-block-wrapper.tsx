@@ -65,7 +65,7 @@ export default function CodeBlockWrapper({
     return (
       <div
         className={cn(
-          "relative grid place-items-center overflow-hidden border rounded-[1rem] bg-card",
+          "relative grid overflow-hidden border rounded-[1rem] bg-card",
           open ? "h-auto" : "h-[400px]"
         )}
       >
@@ -76,24 +76,26 @@ export default function CodeBlockWrapper({
             open ? "hidden" : "block"
           )}
         ></div>
-        <Button
-          size="sm"
-          variant="outline"
-          className="z-10 absolute bottom-5"
-          onClick={() => setOpen(!open)}
-          id="show-more-button"
-        >
-          {open ? "Hide" : "Show More"}
-        </Button>
-        <Button
-          className="absolute top-2 right-2"
-          size="icon"
-          variant="outline"
-          id="copy-code-button"
-          onClick={handleCopy}
-        >
-          {copied ? <CheckIcon /> : <CopyIcon />}
-        </Button>
+        <div className="absolute w-full h-full flex justify-center items-center pointer-events-none">
+          <Button
+            size="sm"
+            variant="outline"
+            className="z-10 absolute bottom-5 pointer-events-auto"
+            onClick={() => setOpen(!open)}
+            id="show-more-button"
+          >
+            {open ? "Hide" : "Show More"}
+          </Button>
+          <Button
+            className="z-10 absolute top-2 right-2 pointer-events-auto"
+            size="icon"
+            variant="outline"
+            id="copy-code-button"
+            onClick={handleCopy}
+          >
+            {copied ? <CheckIcon /> : <CopyIcon />}
+          </Button>
+        </div>
       </div>
     );
   }

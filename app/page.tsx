@@ -4,7 +4,7 @@ import { Icons } from "@/components/icons";
 export default async function Home() {
   const getRepoStarts = async () => {
     const res = await fetch(
-      "https://api.github.com/repos/gonzalochale/chonza",
+      "https://api.github.com/repos/gonzalochale/nextjs-ui-library-template",
       {
         cache: "no-store",
       }

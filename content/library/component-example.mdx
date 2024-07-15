@@ -7,15 +7,19 @@ published: true
 
 # Component Example
 
-This component is an example of how to create a component in the library
+## Getting Started with the component doc page
 
-## Preview
+### You can see the component in the preview
+
+You can see the component in the preview using the ComponentPreview component, only need to pass the name of the component as a prop.
 
 <ComponentPreview name="component-example" />
 
-## Code
+### You can see the code of the component
 
-Copy and paste the following code into your component, example **_component-example.tsx_**.
+You can see the code of the component using the CodeBlockWrapper component, only need to pass the code as a children, this component wrapper has a prop called size, this prop is used to set the a show more button, the possible values are: "full" and "wrapper"
+
+Here is the code of the component using the CodeBlockWrapper on full size:
 
 <CodeBlockWrapper size="full">
 ```tsx
@@ -29,10 +33,70 @@ export default componentExample;
 ```
 </CodeBlockWrapper>
 
-## Usage
+Here is the code of the component using the CodeBlockWrapper on wrapper size, only to show large code blocks:
+
+<CodeBlockWrapper size="wrapper">
+```tsx
+import React from "react";
+
+const componentExample = () => {
+  return (
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                Hello World
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>;
+  )
+};
+
+export default componentExample;
+```
+</CodeBlockWrapper>
+
+### You can show the component code and highlight especific lines
 
 <CodeBlockWrapper size="full">
-```tsx
+```tsx {6}
+import { Button } from "@/components/button";
+
+export function App() {
+  return (
+    <main className="flex max-md:flex-col gap-10">
+      <ComponentExample>Default</ComponentExample>
+    </main>
+  );
+}
+```
+</CodeBlockWrapper>
+
+### You can show the component code and add line numbers
+
+<CodeBlockWrapper size="full">
+```tsx showLineNumbers
+import { Button } from "@/components/button";
+
+export function App() {
+  return (
+    <main className="flex max-md:flex-col gap-10">
+      <ComponentExample>Default</ComponentExample>
+    </main>
+  );
+}
+```
+</CodeBlockWrapper>
+
+### You can highlight words in the code
+
+<CodeBlockWrapper size="full">
+```tsx ["ComponentExample", "Button"]
 import { Button } from "@/components/button";
 
 export function App() {
