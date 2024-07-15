@@ -39,9 +39,9 @@ export function MobileNav() {
               <Link
                 href="/"
                 onClick={() => setOpen(false)}
-                className="flex items-center gap-3 justify-center"
+                className="flex flex-col items-center gap-3 justify-center"
               >
-                {siteConfig.name}
+                Your Library
                 <Badge variant="outline" className="text-normal">
                   Beta
                 </Badge>
@@ -81,9 +81,10 @@ export function MobileNav() {
                     <Link
                       key={component.path}
                       href={component.path}
-                      className="flex items-center gap-3"
+                      className="flex flex-col items-start gap-1"
                       onClick={() => setOpen(false)}
                     >
+                      {component.new && <Badge variant="outline">New</Badge>}
                       <Button
                         variant="link"
                         size="sm"
@@ -94,7 +95,6 @@ export function MobileNav() {
                       >
                         {component.title}
                       </Button>
-                      {component.new && <Badge variant="outline">New</Badge>}
                     </Link>
                   ))}
                 </div>
@@ -106,9 +106,10 @@ export function MobileNav() {
                     <Link
                       key={component.path}
                       href={component.path}
-                      className="flex items-center gap-3"
+                      className="flex flex-col items-start gap-3"
                       onClick={() => setOpen(false)}
                     >
+                      {component.new && <Badge variant="outline">New</Badge>}
                       <Button
                         variant="link"
                         size="sm"
@@ -119,7 +120,6 @@ export function MobileNav() {
                       >
                         {component.title}
                       </Button>
-                      {component.new && <Badge variant="outline">New</Badge>}
                     </Link>
                   ))}
                 </div>

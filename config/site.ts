@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "AstroUI",
-  url: "https://astroui.vercel.app",
-  description: "AstroUI is a AstroJS UI Library built with TailwindCSS.",
+  name: "NextJS UI Library Starter Template",
+  url: "https://x.com/gonzalochale",
+  description:
+    "A NextJS UI Library Starter Template with TypeScript, TailwindCSS, and MDX, create your own UI Library with ease.",
   author: "Gonzalo Chalé",
   links: {
     twitter: "https://x.com/gonzalochale",
-    github: "https://github.com/gonzalochale/astroui",
-    portfolio: "https://www.gonzalochale.dev",
+    github: "https://github.com/gonzalochale/nextjs-ui-library-template",
   },
   docs: [
     {
@@ -19,48 +19,18 @@ export const siteConfig = {
       path: "/docs/creating-a-new-project",
       new: false,
     },
-    {
-      title: "Changelog",
-      path: "/docs/changelog",
-      new: false,
-    },
   ],
   components: [
     {
-      title: "Glitch",
-      path: "/components/glitch",
-      new: false,
-    },
-    {
-      title: "Testimonials",
-      path: "/components/testimonials",
-      new: false,
-    },
-    {
-      title: "Logo Roll",
-      path: "/components/logo-roll",
-      new: false,
-    },
-    {
-      title: "Shine",
-      path: "/components/shine",
-      new: false,
-    },
-    {
-      title: "Shine Card",
-      path: "/components/shine-card",
-      new: true,
-    },
-    {
-      title: "Button",
-      path: "/components/button",
+      title: "Component example",
+      path: "/components/component-example",
       new: true,
     },
   ],
   sections: [
     {
-      title: "Hero",
-      path: "/components/hero",
+      title: "Component Section",
+      path: "/components/component-section",
       new: true,
     },
   ],
