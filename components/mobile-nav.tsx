@@ -98,31 +98,6 @@ export function MobileNav() {
                     </Link>
                   ))}
                 </div>
-                <div className="flex flex-col gap-5 items-start">
-                  <span className="scroll-m-20 text-sm font-medium tracking-tight">
-                    Sections
-                  </span>
-                  {siteConfig.sections.map((component) => (
-                    <Link
-                      key={component.path}
-                      href={component.path}
-                      className="flex flex-col items-start gap-3"
-                      onClick={() => setOpen(false)}
-                    >
-                      {component.new && <Badge variant="outline">New</Badge>}
-                      <Button
-                        variant="link"
-                        size="sm"
-                        className={cn(
-                          "hover:no-underline text-muted-foreground hover:text-foreground px-0",
-                          pathname === `${component.path}` && "text-foreground"
-                        )}
-                      >
-                        {component.title}
-                      </Button>
-                    </Link>
-                  ))}
-                </div>
               </div>
             </ScrollArea>
           </SheetHeader>

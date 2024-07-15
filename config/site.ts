@@ -22,7 +22,6 @@ export const siteConfig = {
       new: true,
     },
   ],
-  sections: [],
 };
 
 export type SiteConfig = typeof siteConfig;
