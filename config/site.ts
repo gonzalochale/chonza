@@ -17,7 +17,7 @@ export const siteConfig = {
   ],
   components: [
     {
-      title: "Component example",
+      title: "The best component",
       path: "/components/component-example",
       new: true,
     },
