@@ -7,29 +7,38 @@ published: true
 
 # Component Example
 
-## Getting Started with the component doc page
+## See the component in the preview
 
-### You can see the component in the preview
-
-You can see the component in the preview using the ComponentPreview component, only need to pass the name of the component as a prop.
+You need to use the ***ComponentPreview*** component, only need to pass the name of the component as a prop.
 
 <ComponentPreview name="component-example" />
 
-### You can see the code of the component
+### See the code of the component
 
-You can see the code of the component using the CodeBlockWrapper component, only need to pass the code as a children, this component wrapper has a prop called size, this prop is used to set the a show more button, the possible values are: "full" and "wrapper"
+Using the ***CodeBlockWrapper*** component, only need to pass the code as a children, this component wrapper has a prop called size, this prop is used to set the a show more button, the possible values are: "full" and "wrapper"
 
 Here is the code of the component using the CodeBlockWrapper on full size:
 
 <CodeBlockWrapper size="full">
 ```tsx
-import React from "react";
+"use client";
 
-const componentExample = () => {
-  return <div>component-example</div>;
+import React from "react";
+import confetti from "canvas-confetti";
+
+const ComponentExample = () => {
+  const handleClick = () => {
+    confetti();
+  };
+
+  return (
+    <button className="border rounded-md px-4 py-2" onClick={handleClick}>
+      Click me
+    </button>
+  );
 };
 
-export default componentExample;
+export default ComponentExample;
 ```
 </CodeBlockWrapper>
 
@@ -37,43 +46,53 @@ Here is the code of the component using the CodeBlockWrapper on wrapper size, on
 
 <CodeBlockWrapper size="wrapper">
 ```tsx
-import React from "react";
+"use client";
 
-const componentExample = () => {
+import React from "react";
+import confetti from "canvas-confetti";
+
+const ComponentExample = () => {
+  const handleClick = () => {
+    confetti();
+  };
+
   return (
-    <div>
-      <div>
-        <div>
-          <div>
-            <div>
-              <div>
-                Hello World
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>;
-  )
+    <button className="border rounded-md px-4 py-2" onClick={handleClick}>
+      Click me
+    </button>
+  );
 };
 
-export default componentExample;
+export default ComponentExample;
 ```
 </CodeBlockWrapper>
 
-### You can show the component code and highlight especific lines
+### Show the component code and highlight especific lines
+
+You can show the component code and highlight specific lines, only need to pass the line number  on the code block
+
+
 
 <CodeBlockWrapper size="full">
-```tsx {6}
-import { Button } from "@/components/button";
+```tsx {3-4} {6,18} {13}
+"use client";
 
-export function App() {
+import React from "react";
+import confetti from "canvas-confetti";
+
+const ComponentExample = () => {
+  const handleClick = () => {
+    confetti();
+  };
+
   return (
-    <main className="flex max-md:flex-col gap-10">
-      <ComponentExample>Default</ComponentExample>
-    </main>
+    <button className="border rounded-md px-4 py-2" onClick={handleClick}>
+      Click me
+    </button>
   );
-}
+};
+
+export default ComponentExample;
 ```
 </CodeBlockWrapper>
 
@@ -81,30 +100,48 @@ export function App() {
 
 <CodeBlockWrapper size="full">
 ```tsx showLineNumbers
-import { Button } from "@/components/button";
+"use client";
 
-export function App() {
+import React from "react";
+import confetti from "canvas-confetti";
+
+const ComponentExample = () => {
+  const handleClick = () => {
+    confetti();
+  };
+
   return (
-    <main className="flex max-md:flex-col gap-10">
-      <ComponentExample>Default</ComponentExample>
-    </main>
+    <button className="border rounded-md px-4 py-2" onClick={handleClick}>
+      Click me
+    </button>
   );
-}
+};
+
+export default ComponentExample;
 ```
 </CodeBlockWrapper>
 
 ### You can highlight words in the code
 
 <CodeBlockWrapper size="full">
-```tsx ["ComponentExample", "Button"]
-import { Button } from "@/components/button";
+```tsx ["ComponentExample", "button"]
+"use client";
 
-export function App() {
+import React from "react";
+import confetti from "canvas-confetti";
+
+const ComponentExample = () => {
+  const handleClick = () => {
+    confetti();
+  };
+
   return (
-    <main className="flex max-md:flex-col gap-10">
-      <ComponentExample>Default</ComponentExample>
-    </main>
+    <button className="border rounded-md px-4 py-2" onClick={handleClick}>
+      Click me
+    </button>
   );
-}
+};
+
+export default ComponentExample;
 ```
 </CodeBlockWrapper>
