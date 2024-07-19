@@ -15,13 +15,7 @@ export const siteConfig = {
       new: false,
     },
   ],
-  components: [
-    {
-      title: "The best component",
-      path: "/components/component-example",
-      new: true,
-    },
-  ],
+  components: [],
 };
 
 export type SiteConfig = typeof siteConfig;
