@@ -1,3 +1,5 @@
+import path from "path";
+
 export const siteConfig = {
   name: "NextJS UI Library Starter Template",
   url: "https://x.com/gonzalochale",
@@ -15,7 +17,13 @@ export const siteConfig = {
       new: false,
     },
   ],
-  components: [],
+  components: [
+    {
+      title: "Confetti",
+      path: "/components/confetti-button",
+      new: true,
+    },
+  ],
 };
 
 export type SiteConfig = typeof siteConfig;
