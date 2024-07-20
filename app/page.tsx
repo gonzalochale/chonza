@@ -4,7 +4,7 @@ import { Icons } from "@/components/icons";
 export default async function Home() {
   const getRepoStarts = async () => {
     const res = await fetch(
-      "https://api.github.com/repos/gonzalochale/react-ui-docs-template",
+      "https://api.github.com/repos/gonzalochale/chonza",
       {
         cache: "no-store",
       }
@@ -19,10 +19,10 @@ export default async function Home() {
         <div className="flex flex-col justify-center space-y-4 text-center">
           <div className="space-y-2">
             <span className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl/none text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/50">
-              Create your own React UI Library with ease.
+              Create your UI Library Docs with Chonza
             </span>
             <p className="w-full px-10 md:text-xl lg:text-lg xl:text-xl text-transparent bg-clip-text bg-gradient-to-r from-foreground to-foreground/50">
-              A NextJS UI Library Starter Template with TypeScript, TailwindCSS,
+              A UI Library Docs Starter Template with TypeScript, TailwindCSS,
               and MDX.
             </p>
           </div>

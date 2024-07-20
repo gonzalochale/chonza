@@ -1,4 +1,4 @@
-# NextJS UI Components Library Starter Template
+# Chonza - Your UI Library Docs template
 
 ## Introduction
 
