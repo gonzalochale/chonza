@@ -3,10 +3,10 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Analytics } from "@vercel/analytics/react";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import PlausibleProvider from "next-plausible";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,8 +33,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const domain = process.env.NEXT_PUBLIC_DOMAIN || "";
+  const customDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_CUSTOM_DOMAIN;
+
   return (
     <html lang="en" className="scroll-pt-[48px]">
+      <head>
+        <PlausibleProvider domain={domain} customDomain={customDomain} />
+      </head>
       <body
         className={cn(
           "min-h-dvh bg-background font-sans antialiased",
@@ -54,7 +60,6 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-          <Analytics />
         </ThemeProvider>
       </body>
     </html>
