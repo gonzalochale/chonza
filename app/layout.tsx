@@ -6,7 +6,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import PlausibleProvider from "next-plausible";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -33,13 +32,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const domain = process.env.NEXT_PUBLIC_DOMAIN || "";
-  const customDomain = process.env.NEXT_PUBLIC_PLAUSIBLE_CUSTOM_DOMAIN;
-
   return (
     <html lang="en" className="scroll-pt-[48px]">
       <head>
-        <PlausibleProvider domain={domain} customDomain={customDomain} />
+        <script
+          defer
+          src="https://analytics.gonzalochale.dev/script.js"
+          data-website-id="43f6b738-ae2a-4219-a5fa-c2d20d700f4f"
+        ></script>
       </head>
       <body
         className={cn(
