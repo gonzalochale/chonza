@@ -37,9 +37,8 @@ export default function RootLayout({
       <head>
         <script
           defer
-          src="https://analytics.gonzalochale.dev/script.js"
-          data-website-id="22896af6-92a6-4ef9-9358-1377459cb557"
-          data-domains="chonza.vercel.app,chonza.gonzalochale.dev"
+          data-domain="chonza.gonzalochale.dev"
+          src="https://plausible.gonzalochale.dev/js/script.outbound-links.js"
         ></script>
       </head>
       <body
