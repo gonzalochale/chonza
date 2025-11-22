@@ -34,13 +34,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-pt-[48px]">
-      <head>
-        <script
-          defer
-          data-domain="chonza.gonzalochale.dev"
-          src="https://plausible.gonzalochale.dev/js/script.outbound-links.js"
-        ></script>
-      </head>
       <body
         className={cn(
           "min-h-dvh bg-background font-sans antialiased",
